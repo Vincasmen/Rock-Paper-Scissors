@@ -1,30 +1,42 @@
 //First I declared each of the choice(rock, paper, scissor).
 
-// const rock = document.getElementById("rock");
-// const paper = document.getElementById("paper");
-// const scissors = document.getElementById("scissors");
-const playersOptions = document.getElementById("players-choice");
-const computerChoice = document.getElementById("computers turn");
-const choice = document.querySelectorAll(".choice");
+const rockPlayer = document.getElementById("rock");
+const paperPlayer = document.getElementById("paper");
+const scissorsPlayer = document.getElementById("scissors");
 
-computerChoice.textContent = "Waiting for you to choose";
+const playersOptions = document.getElementById("players-choice");
+const computerTurn = document.getElementById("computers turn");
+
+//Array for computers choice
+const choices = ["rock", "paper", "scissors"];
+
+//Randomize choice of the computer
+const randomChoice = Math.floor(Math.random() * 3);
+computerChoice = choices[randomChoice];
+console.log(choices[randomChoice]);
+
+// const choice = document.querySelectorAll(".choice");
+
+computerTurn.textContent = "Waiting for you to choose";
 
 //Longer way of creating an event handler for each of the button
 
-// rock.addEventListener("click", function () {
-//   console.log("rock");
-// });
-// paper.addEventListener("click", function () {
-//   console.log("paper");
-// });
-// scissors.addEventListener("click", function () {
-//   console.log("scissors");
-// });
+rockPlayer.addEventListener("click", function () {
+  console.log(rockPlayer.textContent);
+});
+paperPlayer.addEventListener("click", function () {
+  console.log(paperPlayer.textContent);
+});
+scissorsPlayer.addEventListener("click", function () {
+  console.log(scissorsPlayer.textContent);
+});
 
 //For loop, for looping :D over all the buttons
 
-for (let i = 0; i < choice.length; i++) {
-  choice[i].addEventListener("click", function () {
-    console.log("Clicked");
-  });
-}
+// for (let i = 0; i < choice.length; i++) {
+//   choice[i].addEventListener("click", function () {
+//     console.log(choice.length);
+//   });
+// }
+
+const rules = function () {};
