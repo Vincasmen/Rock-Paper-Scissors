@@ -3,32 +3,41 @@
 const rockPlayer = document.getElementById("rock");
 const paperPlayer = document.getElementById("paper");
 const scissorsPlayer = document.getElementById("scissors");
+let computer = document.getElementById("computer-choice");
+const player = document.getElementById("player-choice");
+const result = document.getElementById("result-choice");
+const winner = document.getElementById("winner-announcment");
 
 const playersOptions = document.getElementById("players-choice");
-const computerTurn = document.getElementById("computers turn");
+
+//Array for players buttons
+const playerChoices = [rockPlayer, paperPlayer, scissorsPlayer];
 
 //Array for computers choice
-const choices = ["rock", "paper", "scissors"];
+const computerChoices = ["Rock", "Paper", "Scissors"];
 
 //Randomize choice of the computer
 const randomChoice = Math.floor(Math.random() * 3);
-computerChoice = choices[randomChoice];
-console.log(choices[randomChoice]);
+computer = computerChoices[randomChoice];
+console.log(computerChoices[randomChoice]);
 
-// const choice = document.querySelectorAll(".choice");
-
-computerTurn.textContent = "Waiting for you to choose";
+const compare = function (computerChoice, playerChoice) {
+  if (computerChoice === playerChoice) {
+    return console.log("Tie");
+  }
+};
+const output = compare(computer[randomChoice], player.textContent);
 
 //Longer way of creating an event handler for each of the button
 
 rockPlayer.addEventListener("click", function () {
-  console.log(rockPlayer.textContent);
+  player.textContent = rockPlayer.textContent;
 });
 paperPlayer.addEventListener("click", function () {
-  console.log(paperPlayer.textContent);
+  player.textContent = paperPlayer.textContent;
 });
 scissorsPlayer.addEventListener("click", function () {
-  console.log(scissorsPlayer.textContent);
+  player.textContent = scissorsPlayer.textContent;
 });
 
 //For loop, for looping :D over all the buttons
@@ -38,5 +47,3 @@ scissorsPlayer.addEventListener("click", function () {
 //     console.log(choice.length);
 //   });
 // }
-
-const rules = function () {};
