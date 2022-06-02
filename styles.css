@@ -2,6 +2,7 @@ body {
   background-color: antiquewhite;
   overflow: hidden;
   margin: 0rem;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -19,11 +20,11 @@ h1 {
   margin-top: 5rem;
 }
 
-.computer {
+.winner {
   text-align: center;
   margin-top: 2rem;
-  font-size: large;
 }
-h2 {
-  text-align: center;
+.score {
+  display: flex;
+  justify-content: space-evenly;
 }
