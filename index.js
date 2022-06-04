@@ -28,10 +28,24 @@ const resultBtn = document.getElementById("result");
 // const playerChoices = [rockPlayer, paperPlayer, scissorsPlayer];
 
 //Array for computers choice
-const computerChoices = ["Rock", "Paper", "Scissors"];
+const computerChoices = ["Rock 🪨", "Paper 📰", "Scissors ✂️"];
+//Click events for player options buttons
+const btns = [
+  rockPlayer.addEventListener("click", function () {
+    player.textContent = rockPlayer.textContent;
+  }),
+  paperPlayer.addEventListener("click", function () {
+    player.textContent = paperPlayer.textContent;
+  }),
+  scissorsPlayer.addEventListener("click", function () {
+    player.textContent = scissorsPlayer.textContent;
+  }),
+];
 
-// for (let i = 0; i < resultBtn.length; i++) {}
-resultBtn.addEventListener("click", function () {
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", zkouska());
+}
+const zkouska = btns.addEventListener("click", function () {
   //Randomize choice of the computer
   const randomChoice = Math.floor(Math.random() * 3);
   computer.textContent = computerChoices[randomChoice];
@@ -40,8 +54,8 @@ resultBtn.addEventListener("click", function () {
   if (computer.textContent === player.textContent) {
     winner.textContent = "Tie ❌";
     //Rule 1 🪨❌📰
-  } else if (player.textContent == "Rock") {
-    if (computer.textContent == "Paper") {
+  } else if (player.textContent == "Rock 🪨") {
+    if (computer.textContent == "Paper 📰") {
       //Computer win 🤖🎉
       computerScore.textContent++;
       winner.textContent = "Computer WIN 🤖🎉";
@@ -53,8 +67,8 @@ resultBtn.addEventListener("click", function () {
       // console.log("Player +1");
     }
     //Rule 2 ✂️❌🪨
-  } else if (player.textContent == "Scissors") {
-    if (computer.textContent == "Rock") {
+  } else if (player.textContent == "Scissors ✂️") {
+    if (computer.textContent == "Rock 🪨") {
       //Computer win 🤖🎉
       computerScore.textContent++;
       winner.textContent = "Computer WIN 🤖🎉";
@@ -66,8 +80,8 @@ resultBtn.addEventListener("click", function () {
       // console.log("Player +1");
     }
     //Rule 3 📰❌✂️
-  } else if (player.textContent == "Paper") {
-    if (computer.textContent == "Scissors") {
+  } else if (player.textContent == "Paper 📰") {
+    if (computer.textContent == "Scissors ✂️") {
       //Computer win 🤖🎉
       computerScore.textContent++;
       winner.textContent = "Computer WIN 🤖🎉";
@@ -83,18 +97,7 @@ resultBtn.addEventListener("click", function () {
     ? (winner.textContent = "Computer won the game")
     : playerScore.textContent >= 5
     ? (winner.textContent = "Player won the game")
-    : (winner.textContent = zkouska());
-});
-
-//Click events for player options buttons
-rockPlayer.addEventListener("click", function () {
-  player.textContent = rockPlayer.textContent;
-});
-paperPlayer.addEventListener("click", function () {
-  player.textContent = paperPlayer.textContent;
-});
-scissorsPlayer.addEventListener("click", function () {
-  player.textContent = scissorsPlayer.textContent;
+    : (winner.textContent = resultBtn());
 });
 
 //End Game rules

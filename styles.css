@@ -1,5 +1,5 @@
 body {
-  background-color: antiquewhite;
+  background-color: rgb(142, 191, 255);
   overflow: hidden;
   margin: 0rem;
   font-family: "Poppins", sans-serif;
@@ -9,22 +9,37 @@ h1 {
   text-align: center;
 }
 
-.rock-paper-scisors button {
-  display: flexbox;
-  align-items: center;
-  justify-content: center;
+.rock-paper-scisors {
   text-align: center;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 15px;
-  margin-top: 5rem;
+  padding: 0.3rem;
+  margin-top: 0 auto;
+}
+
+button {
+  border-radius: 15px;
+  font-size: large;
 }
 
 .winner {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 .score {
   display: flex;
   justify-content: space-evenly;
+}
+
+#choice {
+  text-align: center;
+}
+
+.player {
+  color: rgb(255, 56, 56);
+}
+
+.computer {
+  color: rgb(233, 233, 233);
 }
