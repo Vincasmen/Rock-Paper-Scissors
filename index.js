@@ -30,7 +30,7 @@ const resultBtn = document.getElementById("result");
 //Array for computers choice
 const computerChoices = ["Rock", "Paper", "Scissors"];
 
-for (let i = 0; i < resultBtn.clientHeight; i++) {}
+for (let i = 0; i < resultBtn.length; i++) {}
 resultBtn.addEventListener("click", function () {
   //Randomize choice of the computer
   const randomChoice = Math.floor(Math.random() * 3);
@@ -38,19 +38,19 @@ resultBtn.addEventListener("click", function () {
 
   //Tie eventuality
   if (computer.textContent === player.textContent) {
-    console.log("Tie");
+    winner.textContent = "Tie ❌";
     //Rule 1 🪨❌📰
   } else if (player.textContent == "Rock") {
     if (computer.textContent == "Paper") {
       //Computer win 🤖🎉
       computerScore.textContent++;
       winner.textContent = "Computer WIN 🤖🎉";
-      console.log("Computer +1");
+      // console.log("Computer +1");
     } else {
       //Player win 😶🎉
       playerScore.textContent++;
       winner.textContent = "Player WIN 😶🎉";
-      console.log("Player +1");
+      // console.log("Player +1");
     }
     //Rule 2 ✂️❌🪨
   } else if (player.textContent == "Scissors") {
@@ -58,12 +58,12 @@ resultBtn.addEventListener("click", function () {
       //Computer win 🤖🎉
       computerScore.textContent++;
       winner.textContent = "Computer WIN 🤖🎉";
-      console.log("Computer +1");
+      // console.log("Computer +1");
     } else {
       //Player win 😶🎉
       playerScore.textContent++;
       winner.textContent = "Player WIN 😶🎉";
-      console.log("Player +1");
+      // console.log("Player +1");
     }
     //Rule 3 📰❌✂️
   } else if (player.textContent == "Paper") {
@@ -71,25 +71,22 @@ resultBtn.addEventListener("click", function () {
       //Computer win 🤖🎉
       computerScore.textContent++;
       winner.textContent = "Computer WIN 🤖🎉";
-      console.log("Computer +1");
+      // console.log("Computer +1");
     } else {
       //Player win 😶🎉
       playerScore.textContent++;
       winner.textContent = "Player WIN 😶🎉";
-      console.log("Player +1");
+      // console.log("Player +1");
     }
   }
+  computerScore.textContent >= 5
+    ? (winner.textContent = "Computer won the game")
+    : playerScore.textContent >= 5
+    ? (winner.textContent = "Player won the game")
+    : (winner.textContent = "");
 });
 
-// const compare = function (computerChoice, playerChoice) {
-//   if (computerChoice === playerChoice) {
-//     return console.log("Tie");
-//   }
-// };
-// const output = compare(computer[randomChoice], player.textContent);
-
-//Longer way of creating an event handler for each of the button
-
+//Click events for player options buttons
 rockPlayer.addEventListener("click", function () {
   player.textContent = rockPlayer.textContent;
 });
@@ -99,6 +96,32 @@ paperPlayer.addEventListener("click", function () {
 scissorsPlayer.addEventListener("click", function () {
   player.textContent = scissorsPlayer.textContent;
 });
+
+//End Game rules
+
+const endGame = function () {
+  computerScore.textContent > 9
+    ? (winner.textContent = "Computer won the game")
+    : playerScore.textContent > 9
+    ? (winner.textContent = "Player won the game")
+    : (winner.textContent = "");
+};
+const endGame2 = function () {
+  computerScore.textContent > 9
+    ? (winner.textContent = "Computer won the game")
+    : playerScore.textContent > 9
+    ? (winner.textContent = "Player won the game")
+    : (winner.textContent = "");
+};
+
+// const compare = function (computerChoice, playerChoice) {
+//   if (computerChoice === playerChoice) {
+//     return console.log("Tie");
+//   }
+// };
+// const output = compare(computer[randomChoice], player.textContent);
+
+//Longer way of creating an event handler for each of the button
 
 //For loop, for looping :D over all the buttons
 
