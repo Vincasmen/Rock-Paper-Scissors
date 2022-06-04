@@ -30,7 +30,7 @@ const resultBtn = document.getElementById("result");
 //Array for computers choice
 const computerChoices = ["Rock", "Paper", "Scissors"];
 
-for (let i = 0; i < resultBtn.length; i++) {}
+// for (let i = 0; i < resultBtn.length; i++) {}
 resultBtn.addEventListener("click", function () {
   //Randomize choice of the computer
   const randomChoice = Math.floor(Math.random() * 3);
@@ -83,7 +83,7 @@ resultBtn.addEventListener("click", function () {
     ? (winner.textContent = "Computer won the game")
     : playerScore.textContent >= 5
     ? (winner.textContent = "Player won the game")
-    : (winner.textContent = "");
+    : (winner.textContent = zkouska());
 });
 
 //Click events for player options buttons
@@ -100,11 +100,11 @@ scissorsPlayer.addEventListener("click", function () {
 //End Game rules
 
 const endGame = function () {
-  computerScore.textContent > 9
+  computerScore.textContent > 5
     ? (winner.textContent = "Computer won the game")
-    : playerScore.textContent > 9
+    : playerScore.textContent > 5
     ? (winner.textContent = "Player won the game")
-    : (winner.textContent = "");
+    : (winner.textContent = resultBtn);
 };
 const endGame2 = function () {
   computerScore.textContent > 9
