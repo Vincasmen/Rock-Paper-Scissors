@@ -15,7 +15,7 @@ body {
 }
 
 #info-icon {
-  font-size: clamp(1.5rem, 4vw, 2.3rem);
+  font-size: clamp(1.3rem, 4vw, 2.3rem);
   color: rgb(0, 0, 0);
   z-index: 30;
   position: absolute;
@@ -42,13 +42,14 @@ i:active {
   word-wrap: break-word;
 }
 .modal-window {
+  font-size: clamp(0.6rem, 4vw, 1rem);
   color: rgb(0, 0, 0);
   word-wrap: break-word;
   text-align: center;
 }
 
 h1 {
-  font-size: clamp(1.4rem, 4vw, 2.3rem);
+  font-size: clamp(1rem, 4vw, 2.5rem);
   text-align: center;
   text-decoration: underline;
   text-decoration-color: rgb(255, 255, 255);
@@ -74,7 +75,7 @@ h1 {
 button {
   color: rgb(255, 255, 255);
   border-radius: 15px;
-  font-size: large;
+  font-size: clamp(1rem, 4vw, 1.5rem);
   cursor: pointer;
   background-color: rgb(90, 121, 163);
   font-weight: 700;
@@ -99,7 +100,7 @@ button:active {
 }
 
 .winner {
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(1rem, 4vw, 1.8rem);
   position: relative;
   display: flex;
   text-align: center;
@@ -108,7 +109,7 @@ button:active {
 }
 
 .score {
-  font-size: clamp(1rem, 4vw, 2rem);
+  font-size: clamp(1rem, 4vw, 1.6rem);
   margin-top: 0.5rem;
   display: flex;
   justify-content: space-evenly;
@@ -163,7 +164,7 @@ button:active {
 }
 
 .footer-text {
-  font-size: clamp(1.1rem, 4vw, 1rem);
+  font-size: clamp(0.8rem, 4vw, 1.3rem);
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
