@@ -15,7 +15,7 @@ body {
 }
 
 #info-icon {
-  font-size: clamp(1.3rem, 4vw, 2.3rem);
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
   color: rgb(0, 0, 0);
   z-index: 30;
   position: absolute;
@@ -48,7 +48,7 @@ i:active {
 }
 
 h1 {
-  font-size: clamp(1rem, 4vw, 2.3rem);
+  font-size: clamp(1.4rem, 4vw, 2.3rem);
   text-align: center;
   text-decoration: underline;
   text-decoration-color: rgb(255, 255, 255);
@@ -99,7 +99,7 @@ button:active {
 }
 
 .winner {
-  font-size: clamp(1rem, 4vw, 2rem);
+  font-size: clamp(1.4rem, 4vw, 2rem);
   position: relative;
   display: flex;
   text-align: center;
@@ -163,7 +163,7 @@ button:active {
 }
 
 .footer-text {
-  font-size: clamp(1.3rem, 4vw, 1rem);
+  font-size: clamp(1.1rem, 4vw, 1rem);
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
