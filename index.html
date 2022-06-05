@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>🪨&📰&✂️</title>
     <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/27b9d7ad5a.js"
@@ -12,8 +12,21 @@
     ></script>
   </head>
   <body>
-    <h1>Rock&Paper&Scissors</h1>
+    <header class="header">
+      <i id="info-icon" class="far fa-question-circle fa-2x"></i>
+    </header>
+    <div id="modal-div-id" class="modal-div hidden-modal">
+      <p id="modal-window-id" class="modal-window">
+        Rock&Paper&Scissors<br />
+        <br />
+        Simply click Rock 🪨, Paper 📰, Scissors ✂️ buttons.<br />
+        A person or computer that first reaches 5 points wins the game.
+      </p>
+    </div>
     <div>
+      <h1>Rock&Paper&Scissors</h1>
+    </div>
+    <div class="winner-div">
       <h2 class="winner" id="winner-announcment">Winner</h2>
     </div>
     <div class="score">
@@ -26,19 +39,30 @@
         <p class="computer-score-number">0</p>
       </div>
     </div>
-    <div>
+    <div class="dev-only">
       <p id="computer-choice"></p>
       <p id="player-choice"></p>
       <p id="result-choice"></p>
-    </div>
-    <div id="players-choice" class="rock-paper-scisors">
-      <button class="choice" id="rock">Rock 🪨</button>
-      <button class="choice" id="paper">Paper 📰</button>
-      <button class="choice" id="scissors">Scissors ✂️</button>
-    </div>
-    <div>
       <button id="result">Result</button>
     </div>
+    <div id="players-choice" class="rock-paper-scisors hidden-player-btns">
+      <button class="choice-player" id="rock">Rock 🪨</button>
+      <button class="choice-player" id="paper">Paper 📰</button>
+      <button class="choice-player" id="scissors">Scissors ✂️</button>
+    </div>
+    <div id="againBtn-div" class="again hidden">
+      <button class="again-Btn" id="againBtn">Play again 🔂</button>
+    </div>
+    <div id="footer" class="footer-div">
+      <a
+        class="footer-text"
+        rel="noreferrer noopener"
+        target="_blank"
+        href="https://github.com/Vincasmen"
+        >Designed & Built by Jan Vincourek</a
+      >
+    </div>
+    <div id="overlay" class="overlay hidden-overlay"></div>
 
     <script src="index.js"></script>
   </body>
