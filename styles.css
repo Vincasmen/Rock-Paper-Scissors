@@ -5,7 +5,7 @@ body {
   font-family: "Poppins", sans-serif;
   text-shadow: 1px 2px 3px rgba(191, 191, 191, 0.71);
   overflow: hidden;
-  padding: 1rem;
+  padding: 0rem;
 }
 
 .header {
@@ -16,10 +16,10 @@ body {
 }
 
 #info-icon {
+  position: relative;
   font-size: clamp(1.4rem, 4vw, 2.3rem);
   color: rgb(255, 255, 255);
-  z-index: 30;
-  position: absolute;
+  z-index: 99;
   text-shadow: red -2px 0, cyan 2px 0;
 }
 i:active {
@@ -37,8 +37,8 @@ i:active {
   transform: translate(-50%, -50%);
   width: 30%;
   background-color: rgba(255, 255, 255, 0.918);
-  padding: 3rem;
-  border-radius: 10px;
+  padding: 2rem;
+  border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
   word-wrap: break-word;
@@ -50,7 +50,27 @@ i:active {
   text-align: center;
 }
 
+.hidden-overlay {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+}
+
 h1 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-left: 5rem;
+  /* right: 50%;
+  left: 50%; */
   color: rgb(255, 255, 255);
   text-shadow: red -2px 0, cyan 2px 0;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -58,7 +78,6 @@ h1 {
   text-decoration: underline;
   text-decoration-color: red -2px 0, cyan 2px 0;
   text-decoration-thickness: 4px;
-  padding-left: 2rem;
 }
 
 .hidden-player-btns {
@@ -91,8 +110,9 @@ button {
 
 button:hover {
   transition: 0.8s;
-  background-color: rgb(200, 255, 238);
+  background-color: rgb(255, 255, 255);
   color: rgba(0, 0, 0, 0.971);
+  text-shadow: red -2px 0, cyan 2px 0;
 }
 button:active {
   box-shadow: 0 3px #666;
@@ -125,7 +145,7 @@ button:active {
 }
 
 .player {
-  color: rgb(255, 56, 56);
+  color: rgb(255, 255, 255);
   -webkit-text-stroke: 1.2px rgb(21, 21, 21);
 }
 
@@ -176,19 +196,4 @@ button:active {
   font-size: clamp(0.8rem, 4vw, 1.3rem);
   text-decoration: none;
   color: rgb(255, 255, 255);
-}
-
-.hidden-overlay {
-  display: none;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  z-index: 5;
 }
