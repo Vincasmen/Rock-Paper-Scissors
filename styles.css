@@ -1,10 +1,11 @@
 body {
-  background-color: rgb(142, 191, 255);
+  background-color: rgb(0, 0, 0);
   overflow: hidden;
   margin: 0rem;
   font-family: "Poppins", sans-serif;
-  text-shadow: 1px 2px 3px rgba(75, 75, 75, 0.71);
+  text-shadow: 1px 2px 3px rgba(191, 191, 191, 0.71);
   overflow: hidden;
+  padding: 1rem;
 }
 
 .header {
@@ -16,9 +17,10 @@ body {
 
 #info-icon {
   font-size: clamp(1.4rem, 4vw, 2.3rem);
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   z-index: 30;
   position: absolute;
+  text-shadow: red -2px 0, cyan 2px 0;
 }
 i:active {
   transform: translateY(2px);
@@ -34,7 +36,7 @@ i:active {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 30%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.918);
   padding: 3rem;
   border-radius: 10px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
@@ -49,10 +51,12 @@ i:active {
 }
 
 h1 {
+  color: rgb(255, 255, 255);
+  text-shadow: red -2px 0, cyan 2px 0;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   text-align: center;
   text-decoration: underline;
-  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-color: red -2px 0, cyan 2px 0;
   text-decoration-thickness: 4px;
   padding-left: 2rem;
 }
@@ -74,19 +78,21 @@ h1 {
 
 button {
   color: rgb(255, 255, 255);
-  border-radius: 15px;
+  border-radius: 8px;
   font-size: clamp(1rem, 4vw, 1.5rem);
   cursor: pointer;
-  background-color: rgb(90, 121, 163);
+  background-color: rgb(0, 0, 0);
   font-weight: 700;
   transition: 0.2s;
-  box-shadow: 1px 2px 3px rgba(75, 75, 75, 0.71);
+  /* box-shadow: 1px 2px 3px rgba(75, 75, 75, 0.71); */
   text-align: center;
+  border: solid 1.7px rgb(255, 255, 255);
 }
 
 button:hover {
-  background-color: rgb(65, 147, 255);
-  color: rgba(255, 255, 255, 0.971);
+  transition: 0.8s;
+  background-color: rgb(200, 255, 238);
+  color: rgba(0, 0, 0, 0.971);
 }
 button:active {
   box-shadow: 0 3px #666;
@@ -100,6 +106,7 @@ button:active {
 }
 
 .winner {
+  color: rgb(255, 255, 255);
   font-size: clamp(1.4rem, 4vw, 1.8rem);
   position: relative;
   display: flex;
@@ -109,6 +116,7 @@ button:active {
 }
 
 .score {
+  color: white;
   font-size: clamp(1rem, 4vw, 1.6rem);
   margin-top: 0.5rem;
   display: flex;
@@ -153,20 +161,21 @@ button:active {
 }
 
 .footer-div {
-  display: block;
+  display: flex;
   position: fixed;
-  bottom: 0;
+  justify-content: center;
   width: 100%;
+  bottom: 0;
   text-align: center;
-  background-color: rgba(128, 128, 128, 0.282);
+  background-color: rgba(255, 255, 255, 0);
   padding: 0.4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.632);
+  border-top: 2px solid rgb(255, 255, 255);
 }
 
 .footer-text {
   font-size: clamp(0.8rem, 4vw, 1.3rem);
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .hidden-overlay {

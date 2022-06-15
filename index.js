@@ -35,7 +35,7 @@ document.addEventListener("keydown", function (e) {
 const init = function () {
   playerScore.textContent = 0;
   computerScore.textContent = 0;
-  winner.textContent = "⬇️Start the game⬇️";
+  winner.textContent = "▼ Start the game ▼ ";
   showPlayerBtns.classList.remove("hidden-player-btns");
 };
 init();
