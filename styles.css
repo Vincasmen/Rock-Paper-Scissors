@@ -197,3 +197,40 @@ button:active {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
+
+@media only screen and (max-width: 544px) {
+  h1 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-left: clamp(3.6rem, 6vw, 6.5rem);
+    color: rgb(255, 255, 255);
+    text-shadow: red -2px 0, cyan 2px 0;
+    font-size: clamp(1.2rem, 5vw, 6rem);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: red -2px 0, cyan 2px 0;
+    text-decoration-thickness: 4px;
+  }
+
+  #info-icon {
+    display: block;
+    justify-content: right;
+    text-align: right;
+    margin: auto;
+    padding: 0rem;
+    font-size: clamp(1rem, 4vw, 2.3rem);
+    color: rgb(255, 255, 255);
+    z-index: 99;
+    text-shadow: red -2px 0, cyan 2px 0;
+  }
+  i:active {
+    transform: translateY(2px);
+  }
+  .header {
+    float: right;
+    padding: 0rem;
+    /* margin: 0.5rem 2.5rem 0rem 0rem; */
+    cursor: pointer;
+  }
+}
