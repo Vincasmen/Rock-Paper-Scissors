@@ -206,7 +206,7 @@ button:active {
     margin-left: clamp(3.6rem, 6vw, 6.5rem);
     color: rgb(255, 255, 255);
     text-shadow: red -2px 0, cyan 2px 0;
-    font-size: clamp(1.2rem, 5vw, 6rem);
+    font-size: clamp(1.5rem, 5vw, 6rem);
     text-align: center;
     text-decoration: underline;
     text-decoration-color: red -2px 0, cyan 2px 0;
@@ -219,7 +219,7 @@ button:active {
     text-align: right;
     margin: auto;
     padding: 0rem;
-    font-size: clamp(1rem, 4vw, 2.3rem);
+    font-size: clamp(1.3rem, 4vw, 2.3rem);
     color: rgb(255, 255, 255);
     z-index: 99;
     text-shadow: red -2px 0, cyan 2px 0;
