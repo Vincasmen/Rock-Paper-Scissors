@@ -6,6 +6,7 @@ body {
   text-shadow: 1px 2px 3px rgba(191, 191, 191, 0.71);
   overflow: hidden;
   padding: 0rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .header {
