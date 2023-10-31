@@ -1,12 +1,14 @@
 body {
   background-color: rgb(0, 0, 0);
-  overflow: hidden;
   margin: 0rem;
   font-family: "Poppins", sans-serif;
   text-shadow: 1px 2px 3px rgba(191, 191, 191, 0.71);
-  overflow: hidden;
   padding: 0rem;
   -webkit-tap-highlight-color: transparent;
+}
+
+.bckgrnd {
+  background-color: black;
 }
 
 .header {
@@ -65,6 +67,37 @@ i:active {
   backdrop-filter: blur(3px);
 }
 
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 h1 {
   display: flex;
   position: relative;
@@ -86,25 +119,24 @@ h1 {
 }
 
 .rock-paper-scissors {
+  padding: 5rem 0.5rem 10rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
   text-align: center;
-  font-size: clamp(1.3rem, 4vw, 1rem);
   border-radius: 15px;
-  padding-top: 3rem;
-  margin-top: auto;
-}
-.choice {
-  cursor: pointer;
 }
 
 button {
   color: rgb(255, 255, 255);
   border-radius: 8px;
-  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(1.3rem, 2vw, 2rem);
   cursor: pointer;
   background-color: rgb(0, 0, 0);
   font-weight: 700;
   transition: 0.2s;
-  /* box-shadow: 1px 2px 3px rgba(75, 75, 75, 0.71); */
   text-align: center;
   border: solid 1.7px rgb(255, 255, 255);
 }
@@ -137,12 +169,138 @@ button:active {
 }
 
 .score {
+  display: flex;
   color: white;
   font-size: clamp(1rem, 4vw, 1.6rem);
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: nowrap;
   text-align: center;
+  word-wrap: wrap;
+}
+
+.score-playe {
+  background-color: black;
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  min-width: 25vw;
+}
+.score-computer {
+  background-color: black;
+
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  min-width: 25vw;
+}
+
+.scale-in-center {
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pulsate-bck {
+  -webkit-animation: pulsate-bck 0.5s ease-in-out infinite both;
+  animation: pulsate-bck 0.5s ease-in-out infinite both;
+}
+
+@-webkit-keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.text-focus-in {
+  -webkit-animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.current-player-choice {
+  color: white;
+  font-weight: bold;
+  /* font-size: clamp(2rem, 1vw, 3rem); */
+}
+.current-computer-choice {
+  color: white;
+  font-weight: bold;
+  /* font-size: clamp(2rem, 1vw, 3rem); */
 }
 
 .player {
@@ -168,6 +326,116 @@ button:active {
   margin-top: 1rem;
 }
 
+.bounce-top {
+  -webkit-animation: bounce-top 0.9s both;
+  animation: bounce-top 0.9s both;
+}
+
+@-webkit-keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+    transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+    transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -175,22 +443,20 @@ button:active {
 .again {
   text-align: center;
   font-size: 1rem;
-  cursor: pointer;
   border-radius: 15px;
-  padding-top: 3rem;
-  margin-top: auto;
+  margin: 3rem 0rem 5rem 0rem;
 }
 
 .footer-div {
-  display: flex;
   position: fixed;
-  justify-content: center;
-  width: 100%;
   bottom: 0;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0);
-  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0.5rem;
   border-top: 2px solid rgb(255, 255, 255);
+  z-index: -1;
 }
 
 .footer-text {
@@ -234,19 +500,6 @@ button:active {
   }
   i:active {
     transform: translateY(2px);
-  }
-
-  button {
-    color: rgb(255, 255, 255);
-    border-radius: 8px;
-    font-size: clamp(1.4rem, 4vw, 2rem);
-    cursor: pointer;
-    background-color: rgb(0, 0, 0);
-    font-weight: 700;
-    transition: 0.2s;
-    /* box-shadow: 1px 2px 3px rgba(75, 75, 75, 0.71); */
-    text-align: center;
-    border: solid 1.7px rgb(255, 255, 255);
   }
 
   button:hover {

@@ -40,46 +40,50 @@
     />
   </head>
   <body>
-    <header class="header">
-      <i id="info-icon" class="far fa-question-circle fa-2x"></i>
-    </header>
-    <div id="modal-div-id" class="modal-div hidden-modal">
-      <p id="modal-window-id" class="modal-window">
-        Rock&Paper&Scissors<br />
-        <br />
-        Simply click Rock 🪨, Paper 📰, Scissors ✂️ buttons.<br />
-        A person or computer that first reaches 5 points wins the game.
-      </p>
-    </div>
-    <div>
-      <h1>Rock&Paper&Scissors</h1>
-    </div>
-    <div class="winner-div">
-      <h2 class="winner" id="winner-announcment">Winner</h2>
-    </div>
-    <div class="score">
-      <div class="score-playe">
-        <h2 class="player">Player</h2>
-        <p class="player-score-number">0</p>
+    <div class="bckgrnd">
+      <header class="header">
+        <i id="info-icon" class="far fa-question-circle fa-2x"></i>
+      </header>
+      <div id="modal-div-id" class="modal-div hidden-modal">
+        <p id="modal-window-id" class="modal-window">
+          Rock&Paper&Scissors<br />
+          <br />
+          Simply click Rock 🪨, Paper 📰, Scissors ✂️ buttons.<br />
+          A person or computer that first reaches 5 points wins the game.
+        </p>
       </div>
-      <div class="score-computer">
-        <h2 class="computer">Computer</h2>
-        <p class="computer-score-number">0</p>
+      <div>
+        <h1 class="tracking-in-expand">Rock&Paper&Scissors</h1>
       </div>
-    </div>
-    <div class="dev-only">
-      <p id="computer-choice"></p>
-      <p id="player-choice"></p>
-      <p id="result-choice"></p>
-      <button id="result">Result</button>
-    </div>
-    <div id="players-choice" class="rock-paper-scissors hidden-player-btns">
-      <button class="choice-player" id="rock">Rock 🪨</button>
-      <button class="choice-player" id="paper">Paper 📰</button>
-      <button class="choice-player" id="scissors">Scissors ✂️</button>
-    </div>
-    <div id="againBtn-div" class="again hidden">
-      <button class="again-Btn" id="againBtn">Play again 🔂</button>
+      <div class="winner-div">
+        <h2 class="winner" id="winner-announcment">Winner</h2>
+      </div>
+      <div class="score">
+        <div class="score-playe">
+          <p class="current-player-choice">Choose...</p>
+          <h2 class="player">Player</h2>
+          <p class="player-score-number">0</p>
+        </div>
+        <div class="score-computer">
+          <p class="current-computer-choice">Choose...</p>
+          <h2 class="computer">Computer</h2>
+          <p class="computer-score-number">0</p>
+        </div>
+      </div>
+      <div class="dev-only">
+        <p id="computer-choice"></p>
+        <p id="player-choice"></p>
+        <p id="result-choice"></p>
+        <button id="result">Result</button>
+      </div>
+      <div id="players-choice" class="rock-paper-scissors hidden-player-btns">
+        <button class="choice-player" id="rock">Rock 🪨</button>
+        <button class="choice-player" id="paper">Paper 📰</button>
+        <button class="choice-player" id="scissors">Scissors ✂️</button>
+      </div>
+      <div id="againBtn-div" class="again hidden">
+        <button class="again-Btn" id="againBtn">Play again 🔂</button>
+      </div>
     </div>
     <div id="footer" class="footer-div">
       <a
@@ -87,8 +91,8 @@
         rel="noreferrer noopener"
         target="_blank"
         href="https://github.com/Vincasmen"
-        >Designed & Built by Jan Vincourek</a
-      >
+        >Designed & Built by Jan Vincourek
+      </a>
     </div>
     <div id="overlay" class="overlay hidden-overlay"></div>
 
